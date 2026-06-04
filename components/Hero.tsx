@@ -136,7 +136,7 @@ export default function Hero({ lang }: HeroProps) {
           </div>
 
           {/* RIGHT – animated stats */}
-          <div className="space-y-4 lg:space-y-5">
+          <div className="w-full max-w-xl space-y-4 lg:justify-self-end lg:space-y-5">
             <div className="max-w-full text-sm text-slate-200/85">
               {lang === "gr" ? (
                 <p>
