@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import type { Lang } from "@/lib/i18n";
 
@@ -39,7 +40,11 @@ export default function Header({ lang, setLang }: HeaderProps) {
 
   const handleNavClick = (id: string) => {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      window.location.assign(`/#${id}`);
+    }
     setOpen(false);
     setLanguageOpen(false);
   };
@@ -49,7 +54,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
       className="sticky top-0 z-40 bg-[#12133c]/95 backdrop-blur-xl border-b border-slate-700/40 shadow-[0_2px_6px_rgba(0,0,0,0.25)]"
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
-        <a href="#top" className="flex items-center gap-0.5" aria-label="Go to top">
+        <Link href="/#top" className="flex items-center gap-0.5" aria-label="Go to top">
           <Image
             src="/logo.svg"
             alt="MPA Property Services"
@@ -61,7 +66,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
           <span className="-ml-1.5 whitespace-nowrap text-[10px] font-semibold uppercase tracking-[0.06em] text-white/90 sm:-ml-2 sm:text-[12px] sm:tracking-[0.1em]">
             Property Services
           </span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-6 text-xs font-medium text-white md:flex">
           {navItems.map((item) => (

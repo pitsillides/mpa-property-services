@@ -128,6 +128,23 @@ export default function Footer({ lang }: FooterProps) {
           })}
         </p>
 
+        <div className="mt-5 flex flex-wrap justify-center gap-4 text-xs text-white/70">
+          <a href="/privacy" className="transition hover:text-white">
+            {pick(lang, {
+              gr: "Πολιτική απορρήτου",
+              en: "Privacy policy",
+              ru: "Политика конфиденциальности",
+            })}
+          </a>
+          <a href="/cookies" className="transition hover:text-white">
+            {pick(lang, {
+              gr: "Πολιτική cookies",
+              en: "Cookie policy",
+              ru: "Политика cookies",
+            })}
+          </a>
+        </div>
+
         <div className="mt-10 border-t border-white/15 pt-6 text-center text-xs text-white/60">
           © {new Date().getFullYear()} MPA Property Services Ltd.{" "}
           {pick(lang, {
