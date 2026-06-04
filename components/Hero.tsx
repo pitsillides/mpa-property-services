@@ -137,7 +137,7 @@ export default function Hero({ lang }: HeroProps) {
 
           {/* RIGHT – animated stats */}
           <div className="space-y-4 lg:space-y-5">
-            <div className="text-sm text-slate-200/85 max-w-sm">
+            <div className="max-w-full text-sm text-slate-200/85">
               {lang === "gr" ? (
                 <p>
                   Από πολυκατοικίες μέχρι οικιστικά συγκροτήματα, η ομάδα μας
