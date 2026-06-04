@@ -1,7 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ServicesSection from "@/components/ServicesSection";
@@ -17,22 +13,14 @@ import Footer from "@/components/Footer";
 import BackToTopButton from "@/components/BackToTopButton";
 import CookiesSection from "@/components/CookiesSection";
 import OpenInBrowser from "@/components/OpenInBrowser";
-import { htmlLangByLang, type Lang } from "@/lib/i18n";
+import { type Lang } from "@/lib/i18n";
 
 interface HomePageClientProps {
   initialLang: Lang;
 }
 
 export default function HomePageClient({ initialLang }: HomePageClientProps) {
-  const [lang, setLang] = useState<Lang>(initialLang);
-
-  useEffect(() => {
-    setLang(initialLang);
-  }, [initialLang]);
-
-  useEffect(() => {
-    document.documentElement.lang = htmlLangByLang[lang];
-  }, [lang]);
+  const lang = initialLang;
 
   return (
     <main
@@ -40,7 +28,7 @@ export default function HomePageClient({ initialLang }: HomePageClientProps) {
       className="min-h-screen w-full max-w-full overflow-x-hidden bg-slate-50 text-slate-900"
     >
       <OpenInBrowser lang={lang} />
-      <Header lang={lang} setLang={setLang} />
+      <Header lang={lang} />
       <Hero lang={lang} />
       <ServicesSection lang={lang} />
       <AboutSection lang={lang} />

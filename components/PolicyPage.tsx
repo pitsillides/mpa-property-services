@@ -200,7 +200,7 @@ export default function PolicyPage({ kind, initialLang = "gr" }: PolicyPageProps
       className="min-h-screen w-full max-w-full overflow-x-hidden bg-slate-50 text-slate-900"
     >
       <OpenInBrowser lang={lang} />
-      <Header lang={lang} setLang={setLang} />
+      <Header lang={lang} />
 
       <section className="bg-[#12133c] px-4 py-12 text-white sm:py-16">
         <div className="mx-auto max-w-4xl">

@@ -1,5 +1,3 @@
-"use client";
-
 import { pick, type Lang } from "@/lib/i18n";
 
 interface LawsProps {

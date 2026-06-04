@@ -3,15 +3,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
-import { localizedHomePath, localizePath, type Lang } from "@/lib/i18n";
+import { useEffect, useState } from "react";
+import {
+  htmlLangByLang,
+  localizedHomePath,
+  localizePath,
+  type Lang,
+} from "@/lib/i18n";
 
 interface HeaderProps {
   lang: Lang;
-  setLang: (lang: Lang) => void;
 }
 
-export default function Header({ lang, setLang }: HeaderProps) {
+export default function Header({ lang }: HeaderProps) {
   const pathname = usePathname();
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -36,8 +40,11 @@ export default function Header({ lang, setLang }: HeaderProps) {
 
   const activeLanguage = languages.find((item) => item.code === lang) ?? languages[0];
 
+  useEffect(() => {
+    document.documentElement.lang = htmlLangByLang[lang];
+  }, [lang]);
+
   const changeLanguage = (code: Lang) => {
-    setLang(code);
     setLanguageOpen(false);
     setOpen(false);
     router.push(localizePath(pathname, code));

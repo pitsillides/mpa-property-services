@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { localizePath, pick, type Lang } from "@/lib/i18n";
 

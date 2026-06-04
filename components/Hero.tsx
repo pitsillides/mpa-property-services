@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import { pick, type Lang } from "@/lib/i18n";
 
 interface HeroProps {
@@ -20,32 +17,12 @@ function CounterStat({
   label,
   className = "",
 }: CounterStatProps) {
-  const [value, setValue] = useState(0);
-
-  useEffect(() => {
-    let frameId: number;
-    const duration = 1200; // ms
-    const start = performance.now();
-
-    const animate = (now: number) => {
-      const progress = Math.min((now - start) / duration, 1);
-      const current = Math.floor(progress * target);
-      setValue(current);
-      if (progress < 1) {
-        frameId = requestAnimationFrame(animate);
-      }
-    };
-
-    frameId = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(frameId);
-  }, [target]);
-
   return (
     <div
       className={`rounded-[6px] border border-white/15 bg-white/6 px-3 py-3 backdrop-blur-sm shadow-[0_10px_28px_rgba(0,0,0,0.35)] sm:px-5 sm:py-4 ${className}`}
     >
       <p className="text-3xl font-semibold text-cyan-300">
-        {value}
+        {target}
         {suffix}
       </p>
       <p className="mt-1 text-[10px] uppercase tracking-[0.12em] text-slate-200/85 sm:text-[11px] sm:tracking-[0.18em]">
@@ -73,9 +50,11 @@ export default function Hero({ lang }: HeroProps) {
             src="/modern-waveshaped-building-facade-2400.webp"
             alt=""
             aria-hidden="true"
+            width={900}
+            height={373}
             fetchPriority="high"
             loading="eager"
-            decoding="async"
+            decoding="sync"
             className="h-full w-full object-cover"
           />
         </picture>
