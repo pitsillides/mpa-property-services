@@ -116,7 +116,6 @@ export default function TeamSection({ lang }: TeamProps) {
 
               {/* Profile icon */}
               <div className="relative z-10 mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-[6px] bg-[#12133c] shadow-[0_12px_28px_rgba(0,0,0,0.28)] transition-transform duration-300 group-hover:scale-[1.05] sm:mb-4 sm:h-16 sm:w-16">
-                <div className="absolute left-1 top-1 h-2 w-2 rounded-[6px] bg-cyan-300" />
                 <i className="fa-solid fa-user text-white text-lg sm:text-xl" aria-hidden="true" />
               </div>
 
@@ -139,8 +138,7 @@ export default function TeamSection({ lang }: TeamProps) {
               </p>
 
               {member.coFounder && (
-                <p className="relative z-10 mx-auto mt-3 inline-flex items-center gap-1 rounded-[6px] bg-cyan-400/12 px-2 py-1 text-[10px] font-semibold text-cyan-100 sm:text-[11px]">
-                  <i className="fa-solid fa-crown text-[10px]" aria-hidden="true" />
+                <p className="relative z-10 mt-1 text-[11px] font-medium text-cyan-100/90 sm:text-xs">
                   {pick(lang, {
                     gr: "Συνιδρυτής",
                     en: "Co-Founder",
