@@ -282,9 +282,9 @@ export default function OfferSection({ lang }: OfferProps) {
                 />
                 <span>
                   {pick(lang, {
-                    gr: "Με την αποστολή της φόρμας επιβεβαιώνω ότι τα στοιχεία που καταχωρώ είναι σωστά και δίνω τη συγκατάθεσή μου να επικοινωνήσει μαζί μου η MPA Property Services Ltd για σκοπούς αξιολόγησης της αίτησης.",
-                    en: "By submitting this form, I confirm that the information provided is correct and consent to MPA Property Services Ltd contacting me about this request.",
-                    ru: "Отправляя форму, я подтверждаю, что данные указаны верно, и разрешаю MPA Property Services Ltd связаться со мной по этому запросу.",
+                    gr: "Επιβεβαιώνω ότι τα στοιχεία είναι σωστά και συμφωνώ να χρησιμοποιηθούν αποκλειστικά για να επικοινωνήσει μαζί μου η MPA Property Services Ltd σχετικά με την αίτησή μου.",
+                    en: "I confirm that the details are correct and agree that they may be used only so MPA Property Services Ltd can contact me about my request.",
+                    ru: "Я подтверждаю, что данные указаны верно, и согласен, что они будут использованы только для связи MPA Property Services Ltd по моему запросу.",
                   })}
                 </span>
               </div>

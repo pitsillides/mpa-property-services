@@ -30,7 +30,7 @@ export default function ContactSection({ lang }: ContactSectionProps) {
     const subject = pick(lang, {
       gr: "Νέο μήνυμα από τη φόρμα επικοινωνίας",
       en: "New message from the contact form",
-      ru: "Новое сообщение с формы контакта",
+      ru: "Новое сообщение с формы сайта",
     });
     const body = [
       `Name / Company: ${fields.name}`,
@@ -58,7 +58,7 @@ export default function ContactSection({ lang }: ContactSectionProps) {
             {pick(lang, {
               gr: "Μιλήστε μαζί μας για το κτίριό σας",
               en: "Talk to us about your building",
-              ru: "Свяжитесь с нами по вашему зданию",
+              ru: "Расскажите нам о вашем здании",
             })}
           </h2>
           <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
@@ -175,7 +175,7 @@ export default function ContactSection({ lang }: ContactSectionProps) {
                   {pick(lang, {
                     gr: "Φόρμα επικοινωνίας",
                     en: "Contact form",
-                    ru: "Форма контакта",
+                    ru: "Форма связи",
                   })}
                 </span>
                 <span className="text-lg">{open ? "−" : "+"}</span>
@@ -248,6 +248,21 @@ export default function ContactSection({ lang }: ContactSectionProps) {
                         className="w-full rounded-[6px] border border-slate-300 bg-slate-50 px-3 py-2 text-sm outline-none focus:border-cyan-500"
                       />
                     </div>
+
+                    <label className="flex items-start gap-2 text-[11px] leading-relaxed text-slate-600">
+                      <input
+                        type="checkbox"
+                        required
+                        className="mt-1 h-3.5 w-3.5 rounded border-slate-300 text-cyan-500"
+                      />
+                      <span>
+                        {pick(lang, {
+                          gr: "Συμφωνώ να χρησιμοποιηθούν τα στοιχεία μου αποκλειστικά για να απαντήσει η MPA Property Services Ltd στο μήνυμά μου.",
+                          en: "I agree that my details may be used only so MPA Property Services Ltd can reply to my message.",
+                          ru: "Я согласен, что мои данные будут использованы только для ответа MPA Property Services Ltd на моё сообщение.",
+                        })}
+                      </span>
+                    </label>
 
                     <button
                       type="submit"

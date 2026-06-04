@@ -73,9 +73,9 @@ export default function WhyUsSection({ lang }: WhyUsSectionProps) {
             </p>
             <p className="text-slate-100">
               {pick(lang, {
-                gr: "Συνεχής παρακολούθηση, σταθερή ομάδα και οργανωμένες διαδικασίες.",
-                en: "Continuous follow-up, a stable team and well-organised internal processes.",
-                ru: "Постоянное наблюдение, стабильная команда и хорошо организованные процессы.",
+              gr: "Συνεχής παρακολούθηση, σταθερή ομάδα και οργανωμένες διαδικασίες.",
+              en: "Continuous follow-up, a stable team and well-organised internal processes.",
+              ru: "Постоянный контроль, стабильная команда и хорошо организованные процессы.",
               })}
             </p>
           </div>

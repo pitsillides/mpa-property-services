@@ -18,7 +18,7 @@ export default function ServicesSection({ lang }: ServicesProps) {
       enText:
         "Coordination of daily operations, communication with owners and tenants, handling of common-area issues and implementation of General Assembly decisions.",
       ruText:
-        "Организация ежедневной работы, связь с владельцами и жильцами, вопросы общих зон и выполнение решений общих собраний.",
+        "Ежедневная координация, связь с владельцами и жильцами, вопросы общих зон и выполнение решений общих собраний.",
     },
     {
       icon: "fa-solid fa-coins",
@@ -54,7 +54,7 @@ export default function ServicesSection({ lang }: ServicesProps) {
       enText:
         "Organisation of upgrade projects, improvement proposals for common areas and support to Committees in the decision-making process.",
       ruText:
-        "Организация работ по обновлению общих зон, предложения по улучшениям и поддержка комитетов при принятии решений.",
+        "Организация работ по обновлению общих зон, предложения по улучшениям и помощь комитетам при принятии решений.",
     },
   ];
 
@@ -80,7 +80,7 @@ export default function ServicesSection({ lang }: ServicesProps) {
             {pick(lang, {
               gr: "Καλύπτουμε την καθημερινή λειτουργία, τα οικονομικά, τις τεχνικές ανάγκες και τα έργα βελτίωσης, με καθαρές διαδικασίες και τακτική ενημέρωση.",
               en: "We cover daily operations, accounts, technical needs and improvement works, with clear processes and regular updates.",
-              ru: "Мы берём на себя ежедневные вопросы, финансы, технические задачи и улучшения, с понятным процессом и регулярными обновлениями.",
+              ru: "Мы берём на себя ежедневные вопросы, финансы, технические задачи и улучшения, объясняя каждый шаг простым языком.",
             })}
           </p>
         </div>

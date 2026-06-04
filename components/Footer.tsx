@@ -120,6 +120,14 @@ export default function Footer({ lang }: FooterProps) {
           </div>
         </div>
 
+        <p className="mx-auto mt-6 max-w-3xl text-center text-[11px] leading-relaxed text-white/55">
+          {pick(lang, {
+            gr: "Τα στοιχεία που αποστέλλονται μέσω των φορμών χρησιμοποιούνται μόνο για επικοινωνία σχετικά με το αίτημά σας. Οι πληροφορίες της ιστοσελίδας είναι γενικές και δεν αποτελούν νομική συμβουλή.",
+            en: "Details submitted through the forms are used only to respond to your request. Information on this website is general and does not constitute legal advice.",
+            ru: "Данные, отправленные через формы, используются только для ответа на ваш запрос. Информация на сайте носит общий характер и не является юридической консультацией.",
+          })}
+        </p>
+
         <div className="mt-10 border-t border-white/15 pt-6 text-center text-xs text-white/60">
           © {new Date().getFullYear()} MPA Property Services Ltd.{" "}
           {pick(lang, {

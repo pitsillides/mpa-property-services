@@ -14,7 +14,7 @@ export default function CookiesSection({ lang }: CookiesProps) {
   const [mounted, setMounted] = useState(false);
 
   const [showPreferences, setShowPreferences] = useState(false);
-  const [analyticsEnabled, setAnalyticsEnabled] = useState(true);
+  const [analyticsEnabled, setAnalyticsEnabled] = useState(false);
   const [marketingEnabled, setMarketingEnabled] = useState(false);
 
   useEffect(() => {
@@ -99,6 +99,13 @@ export default function CookiesSection({ lang }: CookiesProps) {
                       gr: "Μπορείτε να αποδεχτείτε όλα τα cookies, να απορρίψετε τα μη απαραίτητα ή να αλλάξετε τις επιλογές σας.",
                       en: "You can accept all cookies, reject non-essential ones or choose your preferences.",
                       ru: "Вы можете принять все cookies, отклонить необязательные или выбрать свои настройки.",
+                    })}
+                  </p>
+                  <p className="mt-1 text-[11px] text-slate-400 sm:text-xs">
+                    {pick(lang, {
+                      gr: "Τα μη απαραίτητα cookies ενεργοποιούνται μόνο με τη συγκατάθεσή σας.",
+                      en: "Non-essential cookies are enabled only with your consent.",
+                      ru: "Необязательные cookies включаются только с вашего согласия.",
                     })}
                   </p>
                 </div>

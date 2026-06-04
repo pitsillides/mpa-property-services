@@ -31,7 +31,7 @@ export default function AboutSection({ lang }: AboutProps) {
       textEN:
         "MPA Property Services Ltd was created to offer clients steady care, effective organisation and professional support for their property.",
       textRU:
-        "MPA Property Services Ltd была создана для того, чтобы владельцы получали стабильную заботу, понятную организацию и профессиональную поддержку по своему объекту.",
+        "MPA Property Services Ltd создана для того, чтобы владельцы получали спокойную, понятную и профессиональную поддержку по своей недвижимости.",
       icon: "fa-solid fa-eye",
     },
     {
@@ -55,7 +55,7 @@ export default function AboutSection({ lang }: AboutProps) {
       textEN:
         "We coordinate financial administration, common expenses, rent collection, maintenance and immediate support, matching each need with the right team of partners.",
       textRU:
-        "Мы координируем финансы, общие расходы, сбор арендных платежей, обслуживание и срочную поддержку, подбирая подходящих специалистов под каждую задачу.",
+        "Мы координируем финансы, общие расходы, сбор арендных платежей, обслуживание и срочные вопросы, подбирая подходящих специалистов под каждую задачу.",
       icon: "fa-solid fa-building-circle-check",
     },
   ];
@@ -87,7 +87,7 @@ export default function AboutSection({ lang }: AboutProps) {
               {pick(lang, {
                 gr: "Κρατάμε τις διαδικασίες απλές, την ενημέρωση καθαρή και την επικοινωνία άμεση.",
                 en: "We keep the process simple, the updates clear and the communication direct.",
-                ru: "Мы держим процессы простыми, обновления понятными, а связь быстрой и прямой.",
+                ru: "Мы делаем процессы простыми, обновления понятными, а общение — быстрым и прямым.",
               })}
             </p>
           </div>
