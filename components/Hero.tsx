@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { pick, type Lang } from "@/lib/i18n";
 
 interface HeroProps {
@@ -61,17 +60,25 @@ export default function Hero({ lang }: HeroProps) {
     <section className="relative overflow-hidden bg-[#12133c] text-slate-50">
       {/* Background image */}
       <div className="absolute inset-0">
-        <Image
-          src="/modern-waveshaped-building-facade-2400.webp"
-          alt="Modern building facade"
-          fill
-          priority
-          fetchPriority="high"
-          sizes="100vw"
-          quality={74}
-          unoptimized
-          className="object-cover"
-        />
+        <picture className="absolute inset-0 block">
+          <source
+            media="(max-width: 640px)"
+            srcSet="/modern-waveshaped-building-facade-900.webp"
+          />
+          <source
+            media="(max-width: 1024px)"
+            srcSet="/modern-waveshaped-building-facade-1400.webp"
+          />
+          <img
+            src="/modern-waveshaped-building-facade-2400.webp"
+            alt=""
+            aria-hidden="true"
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+            className="h-full w-full object-cover"
+          />
+        </picture>
         {/* Dark overlay για να δένει με το header */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#12133c]/94 via-[#12133c]/90 to-black/80" />
       </div>
