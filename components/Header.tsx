@@ -60,7 +60,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
       className="fixed inset-x-0 top-0 z-50 bg-[#12133c]/95 backdrop-blur-xl border-b border-slate-700/40 shadow-[0_2px_6px_rgba(0,0,0,0.25)]"
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
-        <Link href={localizedHomePath(lang, "top")} className="flex items-center gap-0.5" aria-label="Go to top">
+        <Link href={localizedHomePath(lang, "top")} className="flex items-center gap-0.5" aria-label="MPA Property Services">
           <Image
             src="/logo.svg"
             alt="MPA Property Services"

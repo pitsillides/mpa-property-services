@@ -132,7 +132,7 @@ export default function OfferSection({ lang }: OfferProps) {
               {/* Building details */}
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-slate-700">
+                  <label htmlFor="quote-building-name" className="text-xs font-semibold text-slate-700">
                     {pick(lang, {
                       gr: "Ονομασία κτιρίου / συγκροτήματος",
                       en: "Building / complex name",
@@ -140,6 +140,7 @@ export default function OfferSection({ lang }: OfferProps) {
                     })}
                   </label>
                   <input
+                    id="quote-building-name"
                     required
                     name="building_name"
                     className="w-full rounded-[6px] border border-slate-300 bg-white/80 px-3 py-2 text-sm shadow-inner focus:border-cyan-500 focus:outline-none"
@@ -147,7 +148,7 @@ export default function OfferSection({ lang }: OfferProps) {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-slate-700">
+                  <label htmlFor="quote-location" className="text-xs font-semibold text-slate-700">
                     {pick(lang, {
                       gr: "Τοποθεσία / Περιοχή",
                       en: "Location / Area",
@@ -155,6 +156,7 @@ export default function OfferSection({ lang }: OfferProps) {
                     })}
                   </label>
                   <input
+                    id="quote-location"
                     required
                     name="location"
                     className="w-full rounded-[6px] border border-slate-300 bg-white/80 px-3 py-2 text-sm shadow-inner focus:border-cyan-500 focus:outline-none"
@@ -162,7 +164,7 @@ export default function OfferSection({ lang }: OfferProps) {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-slate-700">
+                  <label htmlFor="quote-units" className="text-xs font-semibold text-slate-700">
                     {pick(lang, {
                       gr: "Αριθμός διαμερισμάτων / μονάδων",
                       en: "Number of apartments / units",
@@ -170,6 +172,7 @@ export default function OfferSection({ lang }: OfferProps) {
                     })}
                   </label>
                   <input
+                    id="quote-units"
                     required
                     name="units"
                     type="number"
@@ -179,7 +182,7 @@ export default function OfferSection({ lang }: OfferProps) {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-slate-700">
+                  <label htmlFor="quote-building-type" className="text-xs font-semibold text-slate-700">
                     {pick(lang, {
                       gr: "Είδος κτιρίου",
                       en: "Building type",
@@ -187,6 +190,7 @@ export default function OfferSection({ lang }: OfferProps) {
                     })}
                   </label>
                   <select
+                    id="quote-building-type"
                     name="building_type"
                     className="w-full rounded-[6px] border border-slate-300 bg-white/80 px-3 py-2 text-sm shadow-inner focus:border-cyan-500 focus:outline-none"
                   >
@@ -209,7 +213,7 @@ export default function OfferSection({ lang }: OfferProps) {
               {/* Contact person */}
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-slate-700">
+                  <label htmlFor="quote-contact-name" className="text-xs font-semibold text-slate-700">
                     {pick(lang, {
                       gr: "Ονοματεπώνυμο υπεύθυνου επικοινωνίας",
                       en: "Contact person full name",
@@ -217,6 +221,7 @@ export default function OfferSection({ lang }: OfferProps) {
                     })}
                   </label>
                   <input
+                    id="quote-contact-name"
                     required
                     name="contact_name"
                     className="w-full rounded-[6px] border border-slate-300 bg-white/80 px-3 py-2 text-sm shadow-inner focus:border-cyan-500 focus:outline-none"
@@ -224,20 +229,22 @@ export default function OfferSection({ lang }: OfferProps) {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-slate-700">
+                  <label htmlFor="quote-role" className="text-xs font-semibold text-slate-700">
                     {pick(lang, { gr: "Ιδιότητα", en: "Role / Capacity", ru: "Роль" })}
                   </label>
                   <input
+                    id="quote-role"
                     name="role"
                     className="w-full rounded-[6px] border border-slate-300 bg-white/80 px-3 py-2 text-sm shadow-inner focus:border-cyan-500 focus:outline-none"
                   />
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-slate-700">
+                  <label htmlFor="quote-email" className="text-xs font-semibold text-slate-700">
                     Email
                   </label>
                   <input
+                    id="quote-email"
                     required
                     name="email"
                     type="email"
@@ -246,10 +253,11 @@ export default function OfferSection({ lang }: OfferProps) {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-slate-700">
+                  <label htmlFor="quote-phone" className="text-xs font-semibold text-slate-700">
                     {pick(lang, { gr: "Τηλέφωνο επικοινωνίας", en: "Contact phone", ru: "Телефон" })}
                   </label>
                   <input
+                    id="quote-phone"
                     required
                     name="phone"
                     className="w-full rounded-[6px] border border-slate-300 bg-white/80 px-3 py-2 text-sm shadow-inner focus:border-cyan-500 focus:outline-none"
@@ -259,7 +267,7 @@ export default function OfferSection({ lang }: OfferProps) {
 
               {/* Extra info */}
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-700">
+                <label htmlFor="quote-extra-info" className="text-xs font-semibold text-slate-700">
                   {pick(lang, {
                     gr: "Πρόσθετες πληροφορίες / ιδιαιτερότητες κτιρίου",
                     en: "Additional information / special notes",
@@ -267,6 +275,7 @@ export default function OfferSection({ lang }: OfferProps) {
                   })}
                 </label>
                 <textarea
+                  id="quote-extra-info"
                   name="extra_info"
                   rows={4}
                   className="w-full rounded-[6px] border border-slate-300 bg-white/80 px-3 py-2 text-sm shadow-inner focus:border-cyan-500 focus:outline-none resize-y"
@@ -276,17 +285,18 @@ export default function OfferSection({ lang }: OfferProps) {
               {/* Consent */}
               <div className="mt-2 flex items-start gap-2 text-[11px] text-slate-600">
                 <input
+                  id="quote-consent"
                   type="checkbox"
                   required
                   className="mt-1 h-3.5 w-3.5 rounded border-slate-300 text-cyan-500"
                 />
-                <span>
+                <label htmlFor="quote-consent">
                   {pick(lang, {
                     gr: "Επιβεβαιώνω ότι τα στοιχεία είναι σωστά και συμφωνώ να χρησιμοποιηθούν αποκλειστικά για να επικοινωνήσει μαζί μου η MPA Property Services Ltd σχετικά με την αίτησή μου.",
                     en: "I confirm that the details are correct and agree that they may be used only so MPA Property Services Ltd can contact me about my request.",
                     ru: "Я подтверждаю, что данные указаны верно, и согласен, что они будут использованы только для связи MPA Property Services Ltd по моему запросу.",
                   })}
-                </span>
+                </label>
               </div>
 
               {/* Submit */}

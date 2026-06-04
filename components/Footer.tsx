@@ -35,9 +35,9 @@ export default function Footer({ lang }: FooterProps) {
 
           {/* CONTACT */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold tracking-wider uppercase text-white">
+            <h2 className="mb-4 text-sm font-semibold tracking-wider uppercase text-white">
               {pick(lang, { gr: "Επικοινωνία", en: "Contact", ru: "Контакты" })}
-            </h4>
+            </h2>
 
             <ul className="space-y-3 text-sm text-white/85">
               <li className="flex items-start gap-3">
@@ -88,13 +88,13 @@ export default function Footer({ lang }: FooterProps) {
 
           {/* SOCIAL */}
           <div className="md:text-right">
-            <h4 className="mb-4 text-sm font-semibold tracking-wider uppercase text-white">
+            <h2 className="mb-4 text-sm font-semibold tracking-wider uppercase text-white">
               {pick(lang, {
                 gr: "Ακολουθήστε μας",
                 en: "Follow us",
                 ru: "Мы в соцсетях",
               })}
-            </h4>
+            </h2>
 
             <div className="flex gap-6 md:justify-end">
               <a
