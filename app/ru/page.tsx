@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import HomePageClient from "@/components/HomePageClient";
 
 export const metadata: Metadata = {
-  title: "MPA Property Services | Управление зданиями на Кипре",
+  title: "Управление зданиями на Кипре",
   description:
     "Профессиональное управление зданиями, общими расходами и жилыми комплексами на Кипре.",
   alternates: {
@@ -19,7 +19,15 @@ export const metadata: Metadata = {
     description:
       "Профессиональное управление зданиями, общими расходами и жилыми комплексами на Кипре.",
     url: "/ru",
+    images: ["/og-image.png"],
     locale: "ru_RU",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MPA Property Services | Управление зданиями на Кипре",
+    description:
+      "Профессиональное управление зданиями, общими расходами и жилыми комплексами на Кипре.",
+    images: ["/og-image.png"],
   },
 };
 
