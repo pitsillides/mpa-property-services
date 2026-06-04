@@ -1,0 +1,1180 @@
+<!doctype html>
+<html lang="el-CY">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MPA Property Services - PDF Brochure</title>
+    <link rel="stylesheet" href="../app/fontawesome-subset.css" />
+    <style>
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        background: #e5e7eb;
+        color: #172033;
+        font-family: Arial, Helvetica, sans-serif;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        line-height: 1.45;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        height: 297mm;
+        overflow: hidden;
+        margin: 0 auto;
+        background: #f8fafc;
+        padding: 17mm 16mm 15mm;
+        page-break-after: always;
+      }
+
+      .page:last-child {
+        page-break-after: auto;
+      }
+
+      .cover {
+        display: flex;
+        min-height: 297mm;
+        flex-direction: column;
+        justify-content: space-between;
+        background:
+          linear-gradient(135deg, rgba(18, 19, 60, 0.95), rgba(18, 19, 60, 0.9) 48%, rgba(5, 6, 19, 0.86)),
+          url("../public/modern-waveshaped-building-facade-2400.webp") center/cover no-repeat;
+        color: #f8fafc;
+      }
+
+      .brand-row,
+      .page-header,
+      .page-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10mm;
+      }
+
+      .logo {
+        display: block;
+        width: 50mm;
+        height: auto;
+      }
+
+      .cover .logo {
+        width: 58mm;
+      }
+
+      .brand-line {
+        color: rgba(248, 250, 252, 0.84);
+        font-size: 8.5pt;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .cover-main {
+        max-width: 170mm;
+      }
+
+      .eyebrow {
+        margin: 0 0 5mm;
+        color: #42d6ea;
+        font-size: 8.5pt;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        max-width: 165mm;
+        color: #ffffff;
+        font-size: 32pt;
+        font-weight: 700;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .cover-lead {
+        max-width: 150mm;
+        margin-top: 8mm;
+        color: rgba(248, 250, 252, 0.88);
+        font-size: 14pt;
+        line-height: 1.42;
+      }
+
+      .cover-tags {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 4mm;
+        margin-top: 13mm;
+      }
+
+      .tag,
+      .small-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 2.5mm;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.1);
+        color: rgba(248, 250, 252, 0.95);
+        font-size: 8.5pt;
+        font-weight: 700;
+        padding: 3.2mm 3.5mm;
+      }
+
+      .tag i,
+      .small-chip i,
+      .icon-box i,
+      .contact-line i {
+        color: #42d6ea;
+      }
+
+      .cover-contact {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 8mm;
+        align-items: end;
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+        padding-top: 8mm;
+      }
+
+      .cover-contact p {
+        color: rgba(248, 250, 252, 0.84);
+        font-size: 9.5pt;
+      }
+
+      .contact-stack {
+        display: grid;
+        gap: 2mm;
+      }
+
+      .page-header {
+        margin-bottom: 9mm;
+      }
+
+      .page-title-block {
+        max-width: 130mm;
+      }
+
+      .page-kicker {
+        margin-bottom: 2mm;
+        color: #0891b2;
+        font-size: 8pt;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        color: #12133c;
+        font-size: 22pt;
+        line-height: 1.15;
+      }
+
+      h3 {
+        color: #12133c;
+        font-size: 12pt;
+        line-height: 1.25;
+      }
+
+      .intro {
+        max-width: 158mm;
+        margin-top: 3.5mm;
+        color: #475569;
+        font-size: 10.2pt;
+      }
+
+      .section-band {
+        border-radius: 6px;
+        background: #12133c;
+        color: #f8fafc;
+        padding: 8mm;
+      }
+
+      .section-band h2,
+      .section-band h3 {
+        color: #ffffff;
+      }
+
+      .section-band .intro {
+        color: rgba(248, 250, 252, 0.84);
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5mm;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4mm;
+      }
+
+      .card,
+      .plain-card,
+      .quote-card {
+        border-radius: 6px;
+        background: #ffffff;
+        padding: 5.5mm;
+        box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+      }
+
+      .card {
+        border: 1px solid #dbe3ea;
+      }
+
+      .dark-card {
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background: rgba(255, 255, 255, 0.07);
+        color: #f8fafc;
+      }
+
+      .dark-card h3 {
+        color: #ffffff;
+      }
+
+      .dark-card p,
+      .dark-card li {
+        color: rgba(248, 250, 252, 0.86);
+      }
+
+      .icon-box {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 10.5mm;
+        height: 10.5mm;
+        margin-bottom: 3.5mm;
+        border-radius: 6px;
+        background: rgba(14, 181, 203, 0.12);
+        color: #0891b2;
+      }
+
+      .card p,
+      .plain-card p,
+      .quote-card p,
+      li {
+        color: #475569;
+        font-size: 9.2pt;
+      }
+
+      .card.dark-card p,
+      .card.dark-card li {
+        color: rgba(248, 250, 252, 0.82);
+      }
+
+      .card h3,
+      .plain-card h3,
+      .quote-card h3 {
+        margin-bottom: 2.5mm;
+      }
+
+      .stats-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4mm;
+        margin-top: 7mm;
+      }
+
+      .stat {
+        border-radius: 6px;
+        background: #12133c;
+        padding: 5mm;
+        color: #ffffff;
+        text-align: center;
+      }
+
+      .stat strong {
+        display: block;
+        color: #42d6ea;
+        font-size: 24pt;
+        line-height: 1;
+      }
+
+      .stat span {
+        display: block;
+        margin-top: 2mm;
+        color: rgba(248, 250, 252, 0.82);
+        font-size: 7.5pt;
+        font-weight: 700;
+        letter-spacing: 0.11em;
+        text-transform: uppercase;
+      }
+
+      .mt-4 {
+        margin-top: 4mm;
+      }
+
+      .mt-6 {
+        margin-top: 6mm;
+      }
+
+      .mt-8 {
+        margin-top: 8mm;
+      }
+
+      .list {
+        display: grid;
+        gap: 2.4mm;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .list li {
+        position: relative;
+        padding-left: 6mm;
+      }
+
+      .list li::before {
+        position: absolute;
+        left: 0;
+        top: 1.2mm;
+        width: 3mm;
+        height: 3mm;
+        border-radius: 999px;
+        background: #0eb5cb;
+        content: "";
+      }
+
+      .process {
+        display: grid;
+        gap: 3mm;
+      }
+
+      .step {
+        display: grid;
+        grid-template-columns: 12mm 1fr;
+        gap: 4mm;
+        align-items: start;
+      }
+
+      .step-no {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10mm;
+        height: 10mm;
+        border-radius: 6px;
+        background: #0eb5cb;
+        color: #07111f;
+        font-size: 9pt;
+        font-weight: 800;
+      }
+
+      .muted {
+        color: #64748b;
+      }
+
+      .legal-note {
+        border-left: 4px solid #0eb5cb;
+        border-radius: 6px;
+        background: #e9fbfe;
+        padding: 4mm 5mm;
+        color: #334155;
+        font-size: 8.7pt;
+      }
+
+      .info-strip {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5mm;
+        border-radius: 6px;
+        background: #e9fbfe;
+        padding: 5mm;
+      }
+
+      .info-strip h3 {
+        font-size: 10.5pt;
+      }
+
+      .info-strip p {
+        margin-top: 2mm;
+        color: #475569;
+        font-size: 8.8pt;
+      }
+
+      .mini-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3mm;
+      }
+
+      .mini-card {
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 4mm;
+      }
+
+      .mini-card h3 {
+        font-size: 9.4pt;
+      }
+
+      .mini-card p {
+        margin-top: 1.5mm;
+        color: rgba(248, 250, 252, 0.78);
+        font-size: 8.2pt;
+      }
+
+      .light-mini {
+        background: #ffffff;
+        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+      }
+
+      .light-mini p {
+        color: #64748b;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4mm;
+      }
+
+      .team-card {
+        border-radius: 6px;
+        background: #ffffff;
+        padding: 5mm 4mm;
+        text-align: center;
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+      }
+
+      .avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 12mm;
+        height: 12mm;
+        margin: 0 auto 3mm;
+        border-radius: 6px;
+        background: #12133c;
+        color: #ffffff;
+      }
+
+      .team-card h3 {
+        font-size: 10.2pt;
+      }
+
+      .team-card p {
+        margin-top: 1.3mm;
+        color: #64748b;
+        font-size: 8.2pt;
+      }
+
+      .founder {
+        color: #0891b2 !important;
+        font-weight: 700;
+      }
+
+      .quote-card {
+        min-height: 43mm;
+      }
+
+      .quote-mark {
+        margin-bottom: 3mm;
+        color: #0eb5cb;
+        font-size: 15pt;
+      }
+
+      .quote-name {
+        margin-top: 4mm;
+        color: #12133c !important;
+        font-weight: 700;
+      }
+
+      .form-checklist {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3mm 5mm;
+      }
+
+      .field-line {
+        border-bottom: 1px solid #cbd5e1;
+        padding-bottom: 2.5mm;
+        color: #475569;
+        font-size: 8.7pt;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 8mm;
+        align-items: start;
+      }
+
+      .contact-line {
+        display: flex;
+        gap: 3mm;
+        align-items: flex-start;
+        color: #334155;
+        font-size: 10pt;
+      }
+
+      .qr {
+        display: block;
+        width: 42mm;
+        height: 42mm;
+        margin: 0 auto 4mm;
+        border-radius: 6px;
+        background: #ffffff;
+      }
+
+      .language-block {
+        display: grid;
+        gap: 3mm;
+      }
+
+      .language-block .plain-card {
+        box-shadow: none;
+        border: 1px solid #e2e8f0;
+      }
+
+      .cta-strip {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6mm;
+        border-radius: 6px;
+        background: #12133c;
+        color: #f8fafc;
+        padding: 5mm 6mm;
+      }
+
+      .cta-strip p {
+        color: rgba(248, 250, 252, 0.82);
+        font-size: 9pt;
+      }
+
+      .cta-strip strong {
+        display: block;
+        color: #ffffff;
+        font-size: 12pt;
+      }
+
+      .page-footer {
+        position: absolute;
+        right: 16mm;
+        bottom: 8mm;
+        left: 16mm;
+        border-top: 1px solid #dbe3ea;
+        padding-top: 3mm;
+        color: #64748b;
+        font-size: 7.6pt;
+      }
+
+      .cover .page-footer {
+        border-color: rgba(255, 255, 255, 0.2);
+        color: rgba(248, 250, 252, 0.65);
+      }
+
+      .page-number {
+        color: #0891b2;
+        font-weight: 800;
+      }
+
+      .dark-page {
+        background: #0b0c23;
+        color: #f8fafc;
+      }
+
+      .dark-page .page-kicker,
+      .dark-page .page-number {
+        color: #42d6ea;
+      }
+
+      .dark-page h2,
+      .dark-page h3 {
+        color: #ffffff;
+      }
+
+      .dark-page .intro {
+        color: rgba(248, 250, 252, 0.78);
+      }
+
+      .dark-page .page-footer {
+        border-color: rgba(255, 255, 255, 0.16);
+        color: rgba(248, 250, 252, 0.58);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page cover">
+      <div class="brand-row">
+        <img class="logo" src="../public/logo.svg" alt="MPA Property Services" />
+        <p class="brand-line">Property Services</p>
+      </div>
+
+      <div class="cover-main">
+        <p class="eyebrow">Building Management • Cyprus</p>
+        <h1>Διαχείριση κτιρίων, πολυκατοικιών & κοινοχρήστων</h1>
+        <p class="cover-lead">
+          Με έδρα τη Λευκωσία, εστίαση σε Λευκωσία και Λεμεσό, και δυνατότητα
+          παγκύπριας εξυπηρέτησης όπου χρειάζεται κάθε κτίριο.
+        </p>
+        <div class="cover-tags">
+          <div class="tag"><i class="fa-solid fa-building"></i> Διαχείριση</div>
+          <div class="tag"><i class="fa-solid fa-coins"></i> Κοινόχρηστα</div>
+          <div class="tag"><i class="fa-solid fa-screwdriver-wrench"></i> Συντήρηση</div>
+          <div class="tag"><i class="fa-solid fa-clipboard-list"></i> Επιτροπές</div>
+        </div>
+      </div>
+
+      <div class="cover-contact">
+        <p>
+          Καθαρή οικονομική εικόνα, άμεση ανταπόκριση και οργανωμένη καθημερινή
+          λειτουργία για κτίρια, πολυκατοικίες και οικιστικά συγκροτήματα.
+        </p>
+        <div class="contact-stack">
+          <p>700 888 32 • +357 96 848 481</p>
+          <p>services@mpa.cy • mpapropertyservices.com</p>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <span>MPA Property Services Ltd</span>
+        <span class="page-number">01 / 08</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <header class="page-header">
+        <div class="page-title-block">
+          <p class="page-kicker">Υπηρεσίες</p>
+          <h2>Τι αναλαμβάνουμε στην πράξη</h2>
+          <p class="intro">
+            Η ομάδα μας καλύπτει την καθημερινή λειτουργία, τα οικονομικά, τις
+            τεχνικές ανάγκες και τον συντονισμό έργων με σταθερές διαδικασίες.
+          </p>
+        </div>
+        <img class="logo" src="../public/logo.svg" alt="MPA Property Services" />
+      </header>
+
+      <div class="grid-2">
+        <article class="card">
+          <div class="icon-box"><i class="fa-solid fa-building"></i></div>
+          <h3>Καθημερινή λειτουργία</h3>
+          <p>
+            Οργάνωση πολυκατοικιών και συγκροτημάτων, επικοινωνία με ιδιοκτήτες
+            και ενοίκους, διαχείριση κοινόχρηστων θεμάτων και εφαρμογή αποφάσεων
+            Γενικών Συνελεύσεων.
+          </p>
+        </article>
+        <article class="card">
+          <div class="icon-box"><i class="fa-solid fa-coins"></i></div>
+          <h3>Οικονομική διαχείριση & κοινόχρηστα</h3>
+          <p>
+            Έκδοση και αποστολή κοινοχρήστων, παρακολούθηση εισπράξεων,
+            διαφάνεια στα έξοδα και αναλυτική ενημέρωση προς Επιτροπές και
+            ιδιοκτήτες.
+          </p>
+        </article>
+        <article class="card">
+          <div class="icon-box"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h3>Συντήρηση & τεχνικές εργασίες</h3>
+          <p>
+            Προληπτική συντήρηση, διαχείριση βλαβών, συντονισμός συνεργείων και
+            επίβλεψη εργασιών ώστε το κτίριο να παραμένει σε καλή κατάσταση.
+          </p>
+        </article>
+        <article class="card">
+          <div class="icon-box"><i class="fa-solid fa-clipboard-list"></i></div>
+          <h3>Συντονισμός έργων & βελτιώσεων</h3>
+          <p>
+            Οργάνωση εργασιών αναβάθμισης, προτάσεις για κοινόχρηστους χώρους
+            και υποστήριξη Επιτροπών στη διαδικασία λήψης αποφάσεων.
+          </p>
+        </article>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat"><strong>150+</strong><span>Κτίρια υπό διαχείριση</span></div>
+        <div class="stat"><strong>1700+</strong><span>Διαμερίσματα & μονάδες</span></div>
+        <div class="stat"><strong>12</strong><span>Άτομα στην ομάδα μας</span></div>
+      </div>
+
+      <div class="info-strip mt-8">
+        <div>
+          <h3>Περιοχές εξυπηρέτησης</h3>
+          <p>
+            Η έδρα μας είναι στη Λευκωσία, με βασική δραστηριότητα σε Λευκωσία
+            και Λεμεσό. Παράλληλα, εξυπηρετούμε παγκύπρια όπου οι ανάγκες του
+            κτιρίου το απαιτούν.
+          </p>
+        </div>
+        <div>
+          <h3>Γλώσσες επικοινωνίας</h3>
+          <p>
+            Υποστηρίζουμε επικοινωνία στα ελληνικά, αγγλικά και ρωσικά, ώστε οι
+            Επιτροπές και οι ιδιοκτήτες να ενημερώνονται καθαρά.
+          </p>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <span>Υπηρεσίες διαχείρισης κτιρίων</span>
+        <span class="page-number">02 / 08</span>
+      </div>
+    </section>
+
+    <section class="page dark-page">
+      <header class="page-header">
+        <div class="page-title-block">
+          <p class="page-kicker">Συνεργασία</p>
+          <h2>Ο τρόπος που δουλεύουμε</h2>
+          <p class="intro">
+            Κάθε κτίριο έχει διαφορετικές ανάγκες. Γι' αυτό ξεκινάμε από την
+            πραγματική εικόνα του χώρου και οργανώνουμε καθαρό πλάνο λειτουργίας.
+          </p>
+        </div>
+        <img class="logo" src="../public/logo.svg" alt="MPA Property Services" />
+      </header>
+
+      <div class="grid-2">
+        <div class="section-band">
+          <h3>Από την πρώτη συζήτηση μέχρι την τακτική ενημέρωση</h3>
+          <div class="process mt-6">
+            <div class="step">
+              <span class="step-no">01</span>
+              <p>Καταγράφουμε τις ανάγκες της Επιτροπής, των ιδιοκτητών και των ενοίκων.</p>
+            </div>
+            <div class="step">
+              <span class="step-no">02</span>
+              <p>Ελέγχουμε τα πάγια έξοδα, τις υποχρεώσεις και τις τεχνικές εκκρεμότητες.</p>
+            </div>
+            <div class="step">
+              <span class="step-no">03</span>
+              <p>Στήνουμε πρακτικό πλάνο διαχείρισης, επικοινωνίας και παρακολούθησης.</p>
+            </div>
+            <div class="step">
+              <span class="step-no">04</span>
+              <p>Στέλνουμε τακτική ενημέρωση, οικονομικές καταστάσεις και εισηγήσεις βελτίωσης.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2" style="grid-template-columns: 1fr;">
+          <article class="dark-card card">
+            <h3>Προσωπική εξυπηρέτηση</h3>
+            <p>Γνωρίζουμε τα κτίρια που εξυπηρετούμε και κρατάμε την επικοινωνία ανθρώπινη και άμεση.</p>
+          </article>
+          <article class="dark-card card">
+            <h3>Διαφάνεια στα οικονομικά</h3>
+            <p>Σαφείς καταστάσεις κοινοχρήστων, πρόσβαση στα στοιχεία και ξεκάθαρη ενημέρωση.</p>
+          </article>
+          <article class="dark-card card">
+            <h3>Συνέπεια</h3>
+            <p>Συνεχής παρακολούθηση, σταθερή ομάδα και οργανωμένες εσωτερικές διαδικασίες.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="mt-8">
+        <h3>Πότε μας χρειάζεται μια Επιτροπή</h3>
+        <div class="mini-grid mt-4">
+          <div class="mini-card">
+            <h3>Ασάφεια στα κοινόχρηστα</h3>
+            <p>Όταν οι ιδιοκτήτες ζητούν καθαρή εικόνα για έσοδα και έξοδα.</p>
+          </div>
+          <div class="mini-card">
+            <h3>Συχνές βλάβες</h3>
+            <p>Όταν χρειάζεται γρήγορος συντονισμός συνεργείων και ενημέρωση.</p>
+          </div>
+          <div class="mini-card">
+            <h3>Πολλοί ιδιοκτήτες</h3>
+            <p>Όταν η επικοινωνία γίνεται δύσκολη χωρίς κεντρικό συντονισμό.</p>
+          </div>
+          <div class="mini-card">
+            <h3>Έργα αναβάθμισης</h3>
+            <p>Όταν πρέπει να οργανωθούν προσφορές, αποφάσεις και εκτέλεση.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <span>Εμπειρία • διαφάνεια • προσωπική επαφή</span>
+        <span class="page-number">03 / 08</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <header class="page-header">
+        <div class="page-title-block">
+          <p class="page-kicker">Οικονομικά & συντηρήσεις</p>
+          <h2>Καθαρή εικόνα για το ταμείο και την κατάσταση του κτιρίου</h2>
+          <p class="intro">
+            Η σωστή διαχείριση δεν είναι μόνο να πληρώνονται τα κοινόχρηστα.
+            Είναι να υπάρχει πρόγραμμα, τεκμηρίωση και γρήγορη ανταπόκριση.
+          </p>
+        </div>
+        <img class="logo" src="../public/logo.svg" alt="MPA Property Services" />
+      </header>
+
+      <div class="grid-2">
+        <div class="plain-card">
+          <h3>Οικονομική διαχείριση</h3>
+          <ul class="list mt-4">
+            <li>Μηνιαίες καταστάσεις εσόδων και εξόδων.</li>
+            <li>Παρακολούθηση εισπράξεων και οφειλών.</li>
+            <li>Καθαρή ενημέρωση προς Επιτροπή και ιδιοκτήτες.</li>
+            <li>Οργάνωση πάγιων εξόδων για πιο προβλέψιμη λειτουργία.</li>
+            <li>Διαφάνεια στα κοινόχρηστα και στα παραστατικά.</li>
+          </ul>
+        </div>
+        <div class="plain-card">
+          <h3>Συντήρηση & βλάβες</h3>
+          <ul class="list mt-4">
+            <li>Καταγραφή τεχνικών αναγκών και επείγοντων περιστατικών.</li>
+            <li>Συντονισμός συνεργείων και επαγγελματιών.</li>
+            <li>Προληπτική συντήρηση όπου χρειάζεται.</li>
+            <li>Παρακολούθηση εργασιών μέχρι να κλείσει το θέμα.</li>
+            <li>Εισηγήσεις για βελτιώσεις σε κοινόχρηστους χώρους.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section-band mt-8">
+        <h3>Τι κερδίζει η Επιτροπή</h3>
+        <div class="grid-3 mt-4">
+          <div>
+            <p class="small-chip"><i class="fa-solid fa-check"></i> Λιγότερη πίεση</p>
+            <p class="mt-4">Τα καθημερινά θέματα μπαίνουν σε σειρά και δεν μένουν στον αέρα.</p>
+          </div>
+          <div>
+            <p class="small-chip"><i class="fa-solid fa-check"></i> Καλύτερη εικόνα</p>
+            <p class="mt-4">Οι ιδιοκτήτες γνωρίζουν πού πηγαίνουν τα χρήματα και τι έχει γίνει.</p>
+          </div>
+          <div>
+            <p class="small-chip"><i class="fa-solid fa-check"></i> Σωστή συνέχεια</p>
+            <p class="mt-4">Οι αποφάσεις, οι εργασίες και οι εκκρεμότητες παρακολουθούνται σταθερά.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-3 mt-8">
+        <div class="mini-card light-mini">
+          <h3>Μηνιαία εικόνα</h3>
+          <p>Πιο καθαρή παρακολούθηση κοινοχρήστων, οφειλών και βασικών εξόδων.</p>
+        </div>
+        <div class="mini-card light-mini">
+          <h3>Τεχνικό αρχείο</h3>
+          <p>Καλύτερη συνέχεια σε βλάβες, εργασίες, συνεργεία και εκκρεμότητες.</p>
+        </div>
+        <div class="mini-card light-mini">
+          <h3>Πρακτική επικοινωνία</h3>
+          <p>Σταθερό σημείο επαφής για Επιτροπές, ιδιοκτήτες και ενοίκους.</p>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <span>Κοινόχρηστα • συντηρήσεις • τεχνικός συντονισμός</span>
+        <span class="page-number">04 / 08</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <header class="page-header">
+        <div class="page-title-block">
+          <p class="page-kicker">Νομοθεσία & ερωτήσεις</p>
+          <h2>Βάση λειτουργίας και διαφάνειας</h2>
+          <p class="intro">
+            Κοινόχρηστα, αποφάσεις Επιτροπών, πρακτικά και συμβάσεις χρειάζονται
+            σωστή τεκμηρίωση ώστε η λειτουργία να μένει οργανωμένη.
+          </p>
+        </div>
+        <img class="logo" src="../public/logo.svg" alt="MPA Property Services" />
+      </header>
+
+      <div class="grid-2">
+        <article class="card">
+          <div class="icon-box"><i class="fa-solid fa-scale-balanced"></i></div>
+          <h3>Οριζόντια ιδιοκτησία</h3>
+          <p>Ρυθμίζει ιδιοκτησία ορόφων και διαμερισμάτων, ποσοστά συνιδιοκτησίας και υποχρεώσεις στους κοινόχρηστους χώρους.</p>
+        </article>
+        <article class="card">
+          <div class="icon-box"><i class="fa-solid fa-gavel"></i></div>
+          <h3>Κανονισμοί & Επιτροπές</h3>
+          <p>Καθορίζει τη λειτουργία των Διαχειριστικών Επιτροπών, τη λήψη αποφάσεων και τη διαχείριση κοινόχρηστων εξόδων.</p>
+        </article>
+        <article class="card">
+          <div class="icon-box"><i class="fa-solid fa-file-contract"></i></div>
+          <h3>Πρακτικά & συμβάσεις</h3>
+          <p>Οι αποφάσεις και οι συμφωνίες με παρόχους υπηρεσιών πρέπει να τηρούνται γραπτώς για σωστή ενημέρωση.</p>
+        </article>
+        <article class="card">
+          <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Ασφάλεια & ευθύνη</h3>
+          <p>Η σωστή συντήρηση και συμμόρφωση μειώνουν κινδύνους και προστατεύουν Επιτροπή και ιδιοκτήτες.</p>
+        </article>
+      </div>
+
+      <div class="grid-2 mt-8">
+        <div class="plain-card">
+          <h3>Συχνές ερωτήσεις</h3>
+          <ul class="list mt-4">
+            <li>Τι θεωρείται κοινόκτητη οικοδομή;</li>
+            <li>Πώς κατανέμονται τα κοινόχρηστα έξοδα;</li>
+            <li>Πώς ενημερωνόμαστε για τις μηνιαίες δαπάνες;</li>
+            <li>Τι γίνεται αν κάποιος δεν πληρώνει κοινόχρηστα;</li>
+            <li>Ποιοι χώροι θεωρούνται κοινόχρηστοι;</li>
+          </ul>
+        </div>
+        <div class="legal-note">
+          Οι πληροφορίες δίνονται σε γενικό ενημερωτικό επίπεδο και δεν αποτελούν
+          νομική συμβουλή. Για εξειδικευμένη καθοδήγηση, οι ιδιοκτήτες θα πρέπει
+          να απευθύνονται σε νομικό σύμβουλο.
+        </div>
+      </div>
+
+      <div class="info-strip mt-8">
+        <div>
+          <h3>Σταθερή τεκμηρίωση</h3>
+          <p>
+            Πρακτικά, αποφάσεις, συμβάσεις και οικονομικές κινήσεις οργανώνονται
+            ώστε να υπάρχει συνέχεια ακόμα και όταν αλλάζει η Επιτροπή.
+          </p>
+        </div>
+        <div>
+          <h3>Καθαρή ενημέρωση</h3>
+          <p>
+            Οι ιδιοκτήτες καταλαβαίνουν τι πληρώνουν, ποια θέματα τρέχουν και
+            ποιες αποφάσεις χρειάζονται.
+          </p>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <span>Γενική ενημέρωση για κοινόκτητες οικοδομές</span>
+        <span class="page-number">05 / 08</span>
+      </div>
+    </section>
+
+    <section class="page dark-page">
+      <header class="page-header">
+        <div class="page-title-block">
+          <p class="page-kicker">Η ομάδα μας</p>
+          <h2>Επαγγελματισμός, εμπειρία και συνεργασία</h2>
+          <p class="intro">
+            Η διαχείριση κτιρίων χρειάζεται ανθρώπους που συνδυάζουν οργάνωση,
+            επικοινωνία και πρακτική επίλυση προβλημάτων.
+          </p>
+        </div>
+        <img class="logo" src="../public/logo.svg" alt="MPA Property Services" />
+      </header>
+
+      <div class="team-grid">
+        <article class="team-card">
+          <div class="avatar"><i class="fa-solid fa-user"></i></div>
+          <h3>Κώστας Κωνσταντίνου</h3>
+          <p>Γενικός Διευθυντής</p>
+          <p class="founder">Συνιδρυτής</p>
+        </article>
+        <article class="team-card">
+          <div class="avatar"><i class="fa-solid fa-user"></i></div>
+          <h3>Μιχάλης Πιτσιλλίδης</h3>
+          <p>Υπεύθυνος Εταιρικής Ταυτότητας</p>
+          <p class="founder">Συνιδρυτής</p>
+        </article>
+        <article class="team-card">
+          <div class="avatar"><i class="fa-solid fa-user"></i></div>
+          <h3>Τάσος Μπιλιανίδης</h3>
+          <p>Ανάπτυξη Επιχειρηματικών Σχέσεων</p>
+          <p class="founder">Συνιδρυτής</p>
+        </article>
+        <article class="team-card">
+          <div class="avatar"><i class="fa-solid fa-user"></i></div>
+          <h3>Χάρα Ιωάννου</h3>
+          <p>Υπεύθυνη Διαχείρισης Κτιρίων</p>
+        </article>
+        <article class="team-card">
+          <div class="avatar"><i class="fa-solid fa-user"></i></div>
+          <h3>Νικόλας Ρούσσος</h3>
+          <p>Οικονομικός Διευθυντής</p>
+        </article>
+        <article class="team-card">
+          <div class="avatar"><i class="fa-solid fa-user"></i></div>
+          <h3>Δήμητρα Δημητριάδου</h3>
+          <p>Υπεύθυνη Μάρκετινγκ</p>
+        </article>
+      </div>
+
+      <div class="section-band mt-8">
+        <h3>Ο ρόλος μας στην καθημερινότητα του κτιρίου</h3>
+        <p class="intro">
+          Συντονίζουμε οικονομική διαχείριση, κοινόχρηστα, ενοίκια, συντηρήσεις
+          και άμεση υποστήριξη, επιλέγοντας για κάθε ανάγκη την κατάλληλη ομάδα
+          συνεργατών.
+        </p>
+      </div>
+
+      <div class="mini-grid mt-8">
+        <div class="mini-card">
+          <h3>Οικονομικά</h3>
+          <p>Καταστάσεις, εισπράξεις, κοινόχρηστα και ενημέρωση.</p>
+        </div>
+        <div class="mini-card">
+          <h3>Λειτουργία</h3>
+          <p>Καθημερινά θέματα, κοινόχρηστοι χώροι και οργάνωση.</p>
+        </div>
+        <div class="mini-card">
+          <h3>Τεχνικά</h3>
+          <p>Βλάβες, συντήρηση, συνεργεία και παρακολούθηση εργασιών.</p>
+        </div>
+        <div class="mini-card">
+          <h3>Επικοινωνία</h3>
+          <p>Σταθερή επαφή με Επιτροπές, ιδιοκτήτες και ενοίκους.</p>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <span>Ομάδα MPA Property Services</span>
+        <span class="page-number">06 / 08</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <header class="page-header">
+        <div class="page-title-block">
+          <p class="page-kicker">Εμπιστοσύνη & προσφορά</p>
+          <h2>Τι λένε πελάτες και τι χρειάζεται για αρχική εκτίμηση</h2>
+          <p class="intro">
+            Το πρώτο βήμα είναι μια σύντομη εικόνα του κτιρίου, των μονάδων και
+            των βασικών αναγκών του.
+          </p>
+        </div>
+        <img class="logo" src="../public/logo.svg" alt="MPA Property Services" />
+      </header>
+
+      <div class="grid-3">
+        <article class="quote-card">
+          <div class="quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+          <p>Με την MPA Property Services νιώθουμε ότι η πολυκατοικία μας είναι σε καλά χέρια. Υπάρχει οργάνωση, διαφάνεια και άμεση ανταπόκριση.</p>
+          <p class="quote-name">Επιτροπή Διαμερισμάτων - Στρόβολος</p>
+        </article>
+        <article class="quote-card">
+          <div class="quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+          <p>Η συνεργασία μας μάς βοήθησε να βάλουμε τάξη στα κοινόχρηστα και να εξηγήσουμε ξεκάθαρα πού πηγαίνουν τα χρήματα.</p>
+          <p class="quote-name">Διαχειριστική Επιτροπή - Λεμεσός</p>
+        </article>
+        <article class="quote-card">
+          <div class="quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+          <p>Πολύ καλή επικοινωνία, επαγγελματισμός και συνέπεια. Οι οικονομικές αναφορές είναι πάντα αναλυτικές και κατανοητές.</p>
+          <p class="quote-name">Ιδιοκτήτης διαμερίσματος</p>
+        </article>
+      </div>
+
+      <div class="section-band mt-8">
+        <h3>Για να ετοιμάσουμε προσφορά</h3>
+        <p class="intro">Σημειώστε τα βασικά στοιχεία πριν την πρώτη επικοινωνία.</p>
+        <div class="form-checklist mt-6">
+          <div class="field-line">Ονομασία κτιρίου / συγκροτήματος</div>
+          <div class="field-line">Τοποθεσία / περιοχή</div>
+          <div class="field-line">Αριθμός διαμερισμάτων / μονάδων</div>
+          <div class="field-line">Είδος κτιρίου</div>
+          <div class="field-line">Υπεύθυνος επικοινωνίας</div>
+          <div class="field-line">Τηλέφωνο / email</div>
+          <div class="field-line">Τρέχουσες ανάγκες</div>
+          <div class="field-line">Ιδιαιτερότητες κτιρίου</div>
+        </div>
+      </div>
+
+      <div class="cta-strip mt-8">
+        <div>
+          <strong>Επόμενο βήμα</strong>
+          <p>Στείλτε μας τα βασικά στοιχεία και θα επικοινωνήσουμε για πρώτη εκτίμηση.</p>
+        </div>
+        <div>
+          <strong>services@mpa.cy</strong>
+          <p>700 888 32 • +357 96 848 481</p>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <span>Αίτηση προσφοράς χωρίς δέσμευση</span>
+        <span class="page-number">07 / 08</span>
+      </div>
+    </section>
+
+    <section class="page">
+      <header class="page-header">
+        <div class="page-title-block">
+          <p class="page-kicker">Επικοινωνία</p>
+          <h2>Μιλήστε μαζί μας για το κτίριό σας</h2>
+          <p class="intro">
+            Η έδρα μας είναι στη Λευκωσία και εξυπηρετούμε κτίρια σε Λευκωσία,
+            Λεμεσό και παγκύπρια, ανάλογα με τις ανάγκες κάθε ακινήτου.
+          </p>
+        </div>
+        <img class="logo" src="../public/logo.svg" alt="MPA Property Services" />
+      </header>
+
+      <div class="contact-grid">
+        <div class="plain-card">
+          <div class="contact-stack">
+            <p class="contact-line"><i class="fa-solid fa-phone"></i><span>700 888 32</span></p>
+            <p class="contact-line"><i class="fa-solid fa-mobile-screen-button"></i><span>+357 96 848 481</span></p>
+            <p class="contact-line"><i class="fa-regular fa-envelope"></i><span>services@mpa.cy</span></p>
+            <p class="contact-line"><i class="fa-solid fa-location-dot"></i><span>Santa Rosa 1, 2035 Strovolos, Nicosia, Cyprus</span></p>
+            <p class="contact-line"><i class="fa-solid fa-globe"></i><span>mpapropertyservices.com</span></p>
+          </div>
+          <div class="legal-note mt-8">
+            Τα στοιχεία που αποστέλλονται μέσω των φορμών χρησιμοποιούνται μόνο
+            για επικοινωνία σχετικά με το αίτημά σας. Οι πληροφορίες του brochure
+            είναι γενικές και δεν αποτελούν νομική συμβουλή.
+          </div>
+        </div>
+
+        <div class="plain-card" style="text-align: center;">
+          <img class="qr" src="mpa-website-qr.svg" alt="QR code for mpapropertyservices.com" />
+          <h3>Άνοιγμα website</h3>
+          <p>Σκανάρετε για υπηρεσίες, φόρμα προσφοράς και πλήρη στοιχεία επικοινωνίας.</p>
+        </div>
+      </div>
+
+      <div class="language-block mt-8">
+        <div class="plain-card">
+          <h3>English</h3>
+          <p>Building management, apartment block management and common expenses services. Based in Nicosia, serving Nicosia, Limassol and properties across Cyprus where needed.</p>
+        </div>
+        <div class="plain-card">
+          <h3>Русский</h3>
+          <p>Управление зданиями, многоквартирными домами и общими расходами. Офис в Никосии, работа в Никосии, Лимасоле и по всему Кипру при необходимости.</p>
+        </div>
+      </div>
+
+      <div class="info-strip mt-8">
+        <div>
+          <h3>Social media</h3>
+          <p>Facebook: facebook.com/mpapropertyservices<br />Instagram: instagram.com/mpa_services</p>
+        </div>
+        <div>
+          <h3>Για offline παρουσίαση</h3>
+          <p>Το brochure συνοψίζει τις βασικές υπηρεσίες. Η πλήρης και πιο ενημερωμένη έκδοση βρίσκεται στο website.</p>
+        </div>
+      </div>
+
+      <div class="page-footer">
+        <span>MPA Property Services Ltd • services@mpa.cy</span>
+        <span class="page-number">08 / 08</span>
+      </div>
+    </section>
+  </body>
+</html>
