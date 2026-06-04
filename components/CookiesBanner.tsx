@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { pick, type Lang } from "@/lib/i18n";
+import { localizePath, pick, type Lang } from "@/lib/i18n";
 
 interface CookiesProps {
   lang: Lang;
@@ -107,7 +107,10 @@ export default function CookiesSection({ lang }: CookiesProps) {
                       en: "Non-essential cookies are enabled only with your consent.",
                       ru: "Необязательные cookies включаются только с вашего согласия.",
                     })}
-                    <a href="/cookies" className="ml-1 font-semibold text-cyan-300 hover:text-cyan-200">
+                    <a
+                      href={localizePath("/cookies", lang)}
+                      className="ml-1 font-semibold text-cyan-300 hover:text-cyan-200"
+                    >
                       {pick(lang, {
                         gr: "Πολιτική cookies",
                         en: "Cookie policy",

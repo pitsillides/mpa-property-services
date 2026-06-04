@@ -16,6 +16,7 @@ type PolicySection = {
 
 interface PolicyPageProps {
   kind: PolicyKind;
+  initialLang?: Lang;
 }
 
 const updatedAt: LocalizedText = {
@@ -181,9 +182,13 @@ const policyContent: Record<
   },
 };
 
-export default function PolicyPage({ kind }: PolicyPageProps) {
-  const [lang, setLang] = useState<Lang>("gr");
+export default function PolicyPage({ kind, initialLang = "gr" }: PolicyPageProps) {
+  const [lang, setLang] = useState<Lang>(initialLang);
   const content = policyContent[kind];
+
+  useEffect(() => {
+    setLang(initialLang);
+  }, [initialLang]);
 
   useEffect(() => {
     document.documentElement.lang = htmlLangByLang[lang];

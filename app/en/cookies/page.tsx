@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Cookie policy for MPA Property Services Ltd, including necessary, analytics and marketing cookies.",
   alternates: {
-    canonical: "/cookies",
+    canonical: "/en/cookies",
     languages: {
       "el-CY": "/cookies",
       en: "/en/cookies",
@@ -16,6 +16,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function CookiesPolicyPage() {
-  return <PolicyPage kind="cookies" initialLang="gr" />;
+export default function EnglishCookiesPolicyPage() {
+  return <PolicyPage kind="cookies" initialLang="en" />;
 }

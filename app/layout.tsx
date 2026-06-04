@@ -27,14 +27,6 @@ export const metadata: Metadata = {
   creator: siteName,
   publisher: siteName,
   category: "Property Management",
-  alternates: {
-    canonical: "/",
-    languages: {
-      "el-CY": "/",
-      "en-US": "/",
-      "ru-RU": "/",
-    },
-  },
   robots: {
     index: true,
     follow: true,

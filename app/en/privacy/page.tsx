@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Privacy policy for MPA Property Services Ltd and the use of website contact details.",
   alternates: {
-    canonical: "/privacy",
+    canonical: "/en/privacy",
     languages: {
       "el-CY": "/privacy",
       en: "/en/privacy",
@@ -16,6 +16,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function PrivacyPage() {
-  return <PolicyPage kind="privacy" initialLang="gr" />;
+export default function EnglishPrivacyPage() {
+  return <PolicyPage kind="privacy" initialLang="en" />;
 }

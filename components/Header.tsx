@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-import type { Lang } from "@/lib/i18n";
+import { localizedHomePath, localizePath, type Lang } from "@/lib/i18n";
 
 interface HeaderProps {
   lang: Lang;
@@ -11,6 +12,8 @@ interface HeaderProps {
 }
 
 export default function Header({ lang, setLang }: HeaderProps) {
+  const pathname = usePathname();
+  const router = useRouter();
   const [open, setOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
 
@@ -36,6 +39,8 @@ export default function Header({ lang, setLang }: HeaderProps) {
   const changeLanguage = (code: Lang) => {
     setLang(code);
     setLanguageOpen(false);
+    setOpen(false);
+    router.push(localizePath(pathname, code));
   };
 
   const handleNavClick = (id: string) => {
@@ -43,7 +48,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
-      window.location.assign(`/#${id}`);
+      window.location.assign(localizedHomePath(lang, id));
     }
     setOpen(false);
     setLanguageOpen(false);
@@ -54,7 +59,7 @@ export default function Header({ lang, setLang }: HeaderProps) {
       className="sticky top-0 z-40 bg-[#12133c]/95 backdrop-blur-xl border-b border-slate-700/40 shadow-[0_2px_6px_rgba(0,0,0,0.25)]"
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
-        <Link href="/#top" className="flex items-center gap-0.5" aria-label="Go to top">
+        <Link href={localizedHomePath(lang, "top")} className="flex items-center gap-0.5" aria-label="Go to top">
           <Image
             src="/logo.svg"
             alt="MPA Property Services"

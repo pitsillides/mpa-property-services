@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { pick, type Lang } from "@/lib/i18n";
+import { localizePath, pick, type Lang } from "@/lib/i18n";
 
 interface FooterProps {
   lang: Lang;
@@ -129,14 +129,14 @@ export default function Footer({ lang }: FooterProps) {
         </p>
 
         <div className="mt-5 flex flex-wrap justify-center gap-4 text-xs text-white/70">
-          <a href="/privacy" className="transition hover:text-white">
+          <a href={localizePath("/privacy", lang)} className="transition hover:text-white">
             {pick(lang, {
               gr: "Πολιτική απορρήτου",
               en: "Privacy policy",
               ru: "Политика конфиденциальности",
             })}
           </a>
-          <a href="/cookies" className="transition hover:text-white">
+          <a href={localizePath("/cookies", lang)} className="transition hover:text-white">
             {pick(lang, {
               gr: "Πολιτική cookies",
               en: "Cookie policy",
