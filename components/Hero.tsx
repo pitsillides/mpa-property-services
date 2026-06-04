@@ -62,10 +62,12 @@ export default function Hero({ lang }: HeroProps) {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/modern-waveshaped-building-facade.jpg"
+          src="/modern-waveshaped-building-facade-2400.webp"
           alt="Modern building facade"
           fill
           priority
+          sizes="100vw"
+          quality={74}
           className="object-cover"
         />
         {/* Dark overlay για να δένει με το header */}
