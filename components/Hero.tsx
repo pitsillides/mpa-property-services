@@ -92,9 +92,9 @@ export default function Hero({ lang }: HeroProps) {
 
               <p className="text-sm sm:text-base text-slate-200/85">
                 {pick(lang, {
-                  gr: "Αναλαμβάνουμε κοινόχρηστα, εισπράξεις, συντηρήσεις, βλάβες και καθημερινή επικοινωνία με Επιτροπές, ιδιοκτήτες και ενοίκους.",
-                  en: "We take care of common expenses, collections, maintenance, repairs and day-to-day communication with Committees, owners and tenants.",
-                  ru: "Мы ведём общие расходы, сбор взносов, обслуживание, заявки на ремонт и ежедневную связь с комитетами, владельцами и жильцами.",
+                  gr: "Με έδρα τη Λευκωσία, αναλαμβάνουμε διαχείριση κτιρίων, κοινόχρηστα, εισπράξεις, συντηρήσεις, βλάβες και καθημερινή επικοινωνία με Επιτροπές, ιδιοκτήτες και ενοίκους.",
+                  en: "Based in Nicosia, we handle building management, common expenses, collections, maintenance, repairs and day-to-day communication with Committees, owners and tenants.",
+                  ru: "Мы находимся в Никосии и занимаемся управлением зданиями, общими расходами, сбором взносов, обслуживанием, заявками на ремонт и ежедневной связью с комитетами, владельцами и жильцами.",
                 })}
               </p>
             </div>
@@ -130,18 +130,21 @@ export default function Hero({ lang }: HeroProps) {
             <div className="max-w-full text-sm text-slate-200/85">
               {lang === "gr" ? (
                 <p>
-                  Από πολυκατοικίες μέχρι οικιστικά συγκροτήματα, η ομάδα μας
-                  κρατά τις διαδικασίες καθαρές και την ανταπόκριση άμεση.
+                  Από πολυκατοικίες μέχρι οικιστικά συγκροτήματα σε Λευκωσία,
+                  Λεμεσό και παγκύπρια, η ομάδα μας κρατά τις διαδικασίες
+                  καθαρές και την ανταπόκριση άμεση.
                 </p>
               ) : lang === "ru" ? (
                 <p>
-                  Мы работаем с многоквартирными домами и жилыми комплексами,
-                  чтобы процессы были понятными, а реакция на вопросы — быстрой.
+                  Мы работаем с многоквартирными домами и жилыми комплексами в
+                  Никосии, Лимасоле и по всему Кипру, чтобы процессы были
+                  понятными, а реакция на вопросы — быстрой.
                 </p>
               ) : (
                 <p>
-                  From apartment buildings to residential complexes, our team
-                  keeps procedures clear and response times fast.
+                  From apartment buildings to residential complexes in Nicosia,
+                  Limassol and across Cyprus, our team keeps procedures clear
+                  and response times fast.
                 </p>
               )}
             </div>

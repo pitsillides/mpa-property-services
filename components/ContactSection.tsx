@@ -56,16 +56,16 @@ export default function ContactSection({ lang }: ContactSectionProps) {
           </p>
           <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">
             {pick(lang, {
-              gr: "Μιλήστε μαζί μας για το κτίριό σας",
-              en: "Talk to us about your building",
-              ru: "Расскажите нам о вашем здании",
+              gr: "Μιλήστε μαζί μας για διαχείριση κτιρίου ή πολυκατοικίας",
+              en: "Talk to us about building management",
+              ru: "Расскажите нам об управлении вашим зданием",
             })}
           </h2>
           <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
             {pick(lang, {
-              gr: "Δείτε τα στοιχεία επικοινωνίας μας και ανοίξτε τη φόρμα για να μας στείλετε μήνυμα.",
-              en: "View our contact details and open the form to send us a message.",
-              ru: "Посмотрите наши контакты или откройте форму, чтобы отправить сообщение.",
+              gr: "Η έδρα μας είναι στη Λευκωσία και εξυπηρετούμε κτίρια σε Λευκωσία, Λεμεσό και παγκύπρια.",
+              en: "Our base is in Nicosia, serving buildings in Nicosia, Limassol and across Cyprus.",
+              ru: "Наш офис находится в Никосии; мы обслуживаем здания в Никосии, Лимасоле и по всему Кипру.",
             })}
           </p>
         </div>

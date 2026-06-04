@@ -56,17 +56,17 @@ export default function OfferSection({ lang }: OfferProps) {
           </p>
           <h2 className="mt-2 text-3xl font-semibold text-[#12133c]">
             {pick(lang, {
-              gr: "Ζητήστε προσφορά για τη διαχείριση του κτιρίου σας",
-              en: "Request a quote for your building",
-              ru: "Запросите расчёт для вашего здания",
+              gr: "Ζητήστε προσφορά για διαχείριση κτιρίου ή πολυκατοικίας",
+              en: "Request a quote for building or apartment block management",
+              ru: "Запросите расчёт по управлению зданием или домом",
             })}
           </h2>
           <div className="mt-3 h-[3px] w-24 bg-cyan-400 mx-auto rounded-[6px]" />
           <p className="mt-3 text-sm text-slate-600 max-w-2xl mx-auto">
             {pick(lang, {
-              gr: "Συμπληρώστε τα βασικά στοιχεία του κτιρίου και θα επικοινωνήσουμε μαζί σας για να συζητήσουμε τις ανάγκες σας.",
-              en: "Share a few details about the building and we will contact you to discuss what you need.",
-              ru: "Оставьте несколько деталей о здании, и мы свяжемся с вами, чтобы обсудить ваши потребности.",
+              gr: "Συμπληρώστε τα βασικά στοιχεία του κτιρίου σε Λευκωσία, Λεμεσό ή άλλη περιοχή της Κύπρου και θα επικοινωνήσουμε μαζί σας για τις ανάγκες σας.",
+              en: "Share a few details about your building in Nicosia, Limassol or another area of Cyprus, and we will contact you to discuss what you need.",
+              ru: "Оставьте несколько деталей о здании в Никосии, Лимасоле или другом районе Кипра, и мы свяжемся с вами, чтобы обсудить ваши потребности.",
             })}
           </p>
         </div>

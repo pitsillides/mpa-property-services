@@ -18,6 +18,14 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
+    questionGR: "Εξυπηρετείτε μόνο Λευκωσία και Λεμεσό;",
+    questionEN: "Do you only cover Nicosia and Limassol?",
+    questionRU: "Вы работаете только в Никосии и Лимасоле?",
+    answerGR: `Η έδρα μας είναι στη Λευκωσία και η βασική μας δραστηριότητα επικεντρώνεται σε Λευκωσία και Λεμεσό. Παράλληλα, αναλαμβάνουμε διαχείριση κτιρίων, πολυκατοικιών και οικιστικών συγκροτημάτων παγκύπρια, ανάλογα με τις ανάγκες και τη συχνότητα παρουσίας που χρειάζεται κάθε ακίνητο.`,
+    answerEN: `Our base is in Nicosia, and our main activity focuses on Nicosia and Limassol. We also manage buildings, apartment blocks and residential complexes across Cyprus, depending on each property’s needs and the level of on-site presence required.`,
+    answerRU: `Наш офис находится в Никосии, а основное направление работы — Никосия и Лимасол. При этом мы также берём в управление здания, многоквартирные дома и жилые комплексы по всему Кипру, в зависимости от потребностей объекта и необходимой частоты присутствия на месте.`,
+  },
+  {
     questionGR: "Τι σημαίνει κοινόκτητη οικοδομή;",
     questionEN: "What is a jointly owned building?",
     questionRU: "Что такое здание в совместной собственности?",

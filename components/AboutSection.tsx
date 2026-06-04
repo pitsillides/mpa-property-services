@@ -27,11 +27,11 @@ export default function AboutSection({ lang }: AboutProps) {
       titleGR: "Το όραμά μας",
       titleEN: "Our vision",
       textGR:
-        "Η MPA Property Services Ltd δημιουργήθηκε με στόχο να προσφέρει στους πελάτες της σταθερή φροντίδα, αποτελεσματική οργάνωση και επαγγελματική υποστήριξη για την ιδιοκτησία τους.",
+        "Η MPA Property Services Ltd δημιουργήθηκε στη Λευκωσία με στόχο να προσφέρει σταθερή φροντίδα, αποτελεσματική οργάνωση και επαγγελματική υποστήριξη για κτίρια και πολυκατοικίες.",
       textEN:
-        "MPA Property Services Ltd was created to offer clients steady care, effective organisation and professional support for their property.",
+        "MPA Property Services Ltd was created in Nicosia to offer steady care, effective organisation and professional support for buildings and apartment blocks.",
       textRU:
-        "MPA Property Services Ltd создана для того, чтобы владельцы получали спокойную, понятную и профессиональную поддержку по своей недвижимости.",
+        "MPA Property Services Ltd создана в Никосии, чтобы владельцы зданий и квартир получали спокойную, понятную и профессиональную поддержку.",
       icon: "fa-solid fa-eye",
     },
     {

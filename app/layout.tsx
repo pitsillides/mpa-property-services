@@ -4,11 +4,11 @@ import "./globals.css";
 const siteUrl = "https://mpapropertyservices.com";
 const siteName = "MPA Property Services";
 const siteDescription =
-  "Επαγγελματικές υπηρεσίες διαχείρισης κτιρίων, συγκροτημάτων και κοινοχρήστων στην Κύπρο.";
+  "Διαχείριση κτιρίων, πολυκατοικιών και κοινοχρήστων με έδρα τη Λευκωσία και εξειδίκευση σε Λευκωσία και Λεμεσό.";
 
 export const metadata: Metadata = {
   title: {
-    default: "MPA Property Services | Διαχείριση κτιρίων στην Κύπρο",
+    default: "MPA Property Services | Διαχείριση κτιρίων σε Λευκωσία & Λεμεσό",
     template: "%s | MPA Property Services",
   },
   description: siteDescription,
@@ -16,12 +16,22 @@ export const metadata: Metadata = {
   applicationName: siteName,
   keywords: [
     "MPA Property Services",
-    "property management Cyprus",
-    "building management Cyprus",
-    "common expenses Cyprus",
-    "διαχείριση κτιρίων Κύπρος",
-    "κοινόχρηστα Κύπρος",
-    "διαχείριση πολυκατοικιών",
+    "property management Nicosia",
+    "property management Limassol",
+    "building management Nicosia",
+    "building management Limassol",
+    "common expenses Nicosia",
+    "common expenses Limassol",
+    "διαχείριση κτιρίων Λευκωσία",
+    "διαχείριση κτιρίων Λεμεσός",
+    "διαχείριση πολυκατοικιών Λευκωσία",
+    "διαχείριση πολυκατοικιών Λεμεσός",
+    "κοινόχρηστα Λευκωσία",
+    "κοινόχρηστα Λεμεσός",
+    "управление зданиями Никосия",
+    "управление зданиями Лимасол",
+    "общие расходы Никосия",
+    "общие расходы Лимасол",
   ],
   authors: [{ name: siteName, url: siteUrl }],
   creator: siteName,
@@ -39,7 +49,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "MPA Property Services | Διαχείριση κτιρίων στην Κύπρο",
+    title: "MPA Property Services | Διαχείριση κτιρίων σε Λευκωσία & Λεμεσό",
     description: siteDescription,
     url: siteUrl,
     siteName,
@@ -57,7 +67,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MPA Property Services | Building Management in Cyprus",
+    title: "MPA Property Services | Building Management in Nicosia & Limassol",
     description: siteDescription,
     images: ["/og-image.png"],
   },
@@ -88,14 +98,68 @@ const organizationJsonLd = {
     addressRegion: "Nicosia",
     addressCountry: "CY",
   },
-  areaServed: {
-    "@type": "Country",
-    name: "Cyprus",
-  },
+  areaServed: [
+    {
+      "@type": "Country",
+      name: "Cyprus",
+    },
+    {
+      "@type": "City",
+      name: "Nicosia",
+      alternateName: "Λευκωσία",
+    },
+    {
+      "@type": "City",
+      name: "Limassol",
+      alternateName: "Λεμεσός",
+    },
+  ],
   sameAs: [
     "https://www.facebook.com/mpapropertyservices",
     "https://www.instagram.com/mpa_services/",
   ],
+  knowsLanguage: ["el-CY", "en", "ru"],
+  serviceType: [
+    "Building management in Nicosia",
+    "Building management in Limassol",
+    "Apartment building management",
+    "Common expenses administration",
+    "Residential complex management",
+    "Building maintenance coordination",
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Building management services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Building management in Nicosia",
+          serviceType: "Building management",
+          areaServed: "Nicosia",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Building management in Limassol",
+          serviceType: "Building management",
+          areaServed: "Limassol",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Common expenses administration",
+          serviceType: "Common expenses administration",
+          areaServed: "Cyprus",
+        },
+      },
+    ],
+  },
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+35796848481",

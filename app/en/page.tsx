@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import HomePageClient from "@/components/HomePageClient";
 
 export const metadata: Metadata = {
-  title: "Building Management in Cyprus",
+  title: "Building Management in Nicosia & Limassol",
   description:
-    "Professional building management, common expenses and property services for buildings and residential complexes in Cyprus.",
+    "Nicosia-based building management, apartment block management and common expenses services for Nicosia and Limassol, with support available across Cyprus.",
   alternates: {
     canonical: "/en",
     languages: {
@@ -15,18 +15,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "MPA Property Services | Building Management in Cyprus",
+    title: "MPA Property Services | Building Management in Nicosia & Limassol",
     description:
-      "Professional building management, common expenses and property services for buildings and residential complexes in Cyprus.",
+      "Professional building management, apartment block management and common expenses services in Nicosia and Limassol, with island-wide support where needed.",
     url: "/en",
     images: ["/og-image.png"],
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "MPA Property Services | Building Management in Cyprus",
+    title: "MPA Property Services | Building Management in Nicosia & Limassol",
     description:
-      "Professional building management, common expenses and property services for buildings and residential complexes in Cyprus.",
+      "Nicosia-based building management, apartment block management and common expenses services for Nicosia and Limassol.",
     images: ["/og-image.png"],
   },
 };

@@ -12,11 +12,11 @@ export default function ServicesSection({ lang }: ServicesProps) {
       enTitle: "Daily operations",
       ruTitle: "Ежедневная работа здания",
       grText:
-        "Οργάνωση της καθημερινής λειτουργίας, επικοινωνία με ιδιοκτήτες και ενοίκους, διαχείριση θεμάτων κοινοχρήστων και εφαρμογή αποφάσεων Γενικών Συνελεύσεων.",
+        "Οργάνωση της καθημερινής λειτουργίας για πολυκατοικίες και συγκροτήματα, επικοινωνία με ιδιοκτήτες και ενοίκους, διαχείριση θεμάτων κοινοχρήστων και εφαρμογή αποφάσεων Γενικών Συνελεύσεων.",
       enText:
-        "Coordination of daily operations, communication with owners and tenants, handling of common-area issues and implementation of General Assembly decisions.",
+        "Coordination of daily operations for apartment blocks and complexes, communication with owners and tenants, handling of common-area issues and implementation of General Assembly decisions.",
       ruText:
-        "Ежедневная координация, связь с владельцами и жильцами, вопросы общих зон и выполнение решений общих собраний.",
+        "Ежедневная координация для многоквартирных домов и комплексов, связь с владельцами и жильцами, вопросы общих зон и выполнение решений общих собраний.",
     },
     {
       icon: "fa-solid fa-coins",
@@ -69,16 +69,16 @@ export default function ServicesSection({ lang }: ServicesProps) {
           </p>
           <h2 className="mt-2 text-2xl sm:text-3xl font-semibold text-slate-50">
             {pick(lang, {
-              gr: "Οι υπηρεσίες που κρατούν το κτίριο οργανωμένο",
-              en: "Services that keep your building running smoothly",
-              ru: "Услуги, которые помогают зданию работать стабильно",
+              gr: "Υπηρεσίες διαχείρισης για κτίρια, πολυκατοικίες & συγκροτήματα",
+              en: "Management services for buildings, apartment blocks & complexes",
+              ru: "Услуги по управлению зданиями, домами и комплексами",
             })}
           </h2>
           <p className="mt-3 text-sm sm:text-[15px] text-slate-200/80 max-w-2xl mx-auto">
             {pick(lang, {
-              gr: "Καλύπτουμε την καθημερινή λειτουργία, τα οικονομικά, τις τεχνικές ανάγκες και τα έργα βελτίωσης, με καθαρές διαδικασίες και τακτική ενημέρωση.",
-              en: "We cover daily operations, accounts, technical needs and improvement works, with clear processes and regular updates.",
-              ru: "Мы берём на себя ежедневные вопросы, финансы, технические задачи и улучшения, объясняя каждый шаг простым языком.",
+              gr: "Καλύπτουμε καθημερινή λειτουργία, κοινόχρηστα, τεχνικές ανάγκες και έργα βελτίωσης σε Λευκωσία και Λεμεσό, με δυνατότητα εξυπηρέτησης παγκύπρια.",
+              en: "We cover daily operations, common expenses, technical needs and improvement works in Nicosia and Limassol, with island-wide support where needed.",
+              ru: "Мы берём на себя ежедневные вопросы, общие расходы, технические задачи и улучшения в Никосии и Лимасоле, а при необходимости работаем по всему Кипру.",
             })}
           </p>
         </div>

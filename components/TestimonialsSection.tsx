@@ -23,9 +23,9 @@ export default function TestimonialsSection({ lang }: TestimonialsProps) {
         "С MPA Property Services мы чувствуем, что наш дом в надёжных руках. Есть порядок, прозрачность и быстрая реакция на вопросы.",
     },
     {
-      nameGR: "Διαχειριστική Επιτροπή Συγκροτήματος",
-      nameEN: "Complex Management Committee",
-      nameRU: "Комитет жилого комплекса",
+      nameGR: "Διαχειριστική Επιτροπή Συγκροτήματος – Λεμεσός",
+      nameEN: "Complex Management Committee – Limassol",
+      nameRU: "Комитет жилого комплекса — Лимасол",
       textGR:
         "Η συνεργασία μας μάς βοήθησε να βάλουμε τάξη στα κοινόχρηστα και να εξηγήσουμε ξεκάθαρα σε όλους πού πηγαίνουν τα χρήματα.",
       textEN:
