@@ -66,8 +66,10 @@ export default function Hero({ lang }: HeroProps) {
           alt="Modern building facade"
           fill
           priority
+          fetchPriority="high"
           sizes="100vw"
           quality={74}
+          unoptimized
           className="object-cover"
         />
         {/* Dark overlay για να δένει με το header */}
