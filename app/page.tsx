@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import HomePageClient from "@/components/HomePageClient";
 
 export const metadata: Metadata = {
-  title: "Διαχείριση κτιρίων στην Κύπρο",
+  title: "Διαχείριση κτιρίων στην Κύπρο | MPA Property Services",
   description:
     "Επαγγελματική διαχείριση κτιρίων, κοινοχρήστων και συγκροτημάτων στην Κύπρο.",
   alternates: {
