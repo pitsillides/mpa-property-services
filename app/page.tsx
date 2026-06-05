@@ -19,6 +19,14 @@ export const metadata: Metadata = {
     description:
       "Διαχείριση κτιρίων, πολυκατοικιών και κοινοχρήστων με έδρα τη Λευκωσία, ενεργή παρουσία σε Λευκωσία και Λεμεσό, και δυνατότητα παγκύπριας εξυπηρέτησης.",
     url: "/",
+    images: [
+      {
+        url: "/og-social-preview.png",
+        width: 1200,
+        height: 630,
+        alt: "MPA Property Services - Building management in Nicosia and Limassol",
+      },
+    ],
     locale: "el_CY",
   },
   twitter: {
