@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description:
       "Управление зданиями, многоквартирными домами и общими расходами в Никосии и Лимасоле, с возможностью обслуживания по всему Кипру.",
     url: "/ru",
-    images: ["/og-image.png"],
+    images: ["/og-social-preview.png"],
     locale: "ru_RU",
   },
   twitter: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "MPA Property Services | Управление зданиями в Никосии и Лимасоле",
     description:
       "Управление зданиями, многоквартирными домами и общими расходами в Никосии и Лимасоле.",
-    images: ["/og-image.png"],
+    images: ["/og-social-preview.png"],
   },
 };
 

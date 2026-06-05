@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description:
       "Professional building management, apartment block management and common expenses services in Nicosia and Limassol, with island-wide support where needed.",
     url: "/en",
-    images: ["/og-image.png"],
+    images: ["/og-social-preview.png"],
     locale: "en_US",
   },
   twitter: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "MPA Property Services | Building Management in Nicosia & Limassol",
     description:
       "Nicosia-based building management, apartment block management and common expenses services for Nicosia and Limassol.",
-    images: ["/og-image.png"],
+    images: ["/og-social-preview.png"],
   },
 };
 

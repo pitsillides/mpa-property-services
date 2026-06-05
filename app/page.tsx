@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "MPA Property Services | Διαχείριση κτιρίων σε Λευκωσία & Λεμεσό",
     description:
       "Με έδρα τη Λευκωσία, αναλαμβάνουμε διαχείριση κτιρίων, πολυκατοικιών και κοινοχρήστων σε Λευκωσία και Λεμεσό.",
-    images: ["/og-image.png"],
+    images: ["/og-social-preview.png"],
   },
 };
 
