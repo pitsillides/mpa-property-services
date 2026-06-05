@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: "/",
     images: [
       {
-        url: "/og-social-preview.png",
+        url: "/og-social-preview-en.png",
         width: 1200,
         height: 630,
         alt: "MPA Property Services - Building management in Nicosia and Limassol",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: "MPA Property Services | Διαχείριση κτιρίων σε Λευκωσία & Λεμεσό",
     description:
       "Με έδρα τη Λευκωσία, αναλαμβάνουμε διαχείριση κτιρίων, πολυκατοικιών και κοινοχρήστων σε Λευκωσία και Λεμεσό.",
-    images: ["/og-social-preview.png"],
+    images: ["/og-social-preview-en.png"],
   },
 };
 

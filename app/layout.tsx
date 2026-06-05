@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     siteName,
     images: [
       {
-        url: "/og-social-preview.png",
+        url: "/og-social-preview-en.png",
         width: 1200,
         height: 630,
         alt: "MPA Property Services - Building management in Cyprus",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "MPA Property Services | Building Management in Nicosia & Limassol",
     description: siteDescription,
-    images: ["/og-social-preview.png"],
+    images: ["/og-social-preview-en.png"],
   },
   icons: {
     icon: "/favicon.svg",
@@ -86,7 +86,7 @@ const organizationJsonLd = {
   name: siteName,
   url: siteUrl,
   logo: `${siteUrl}/logo.png`,
-  image: `${siteUrl}/og-social-preview.png`,
+  image: `${siteUrl}/og-social-preview-en.png`,
   description: siteDescription,
   telephone: ["+35770088832", "+35796848481"],
   email: "services@mpa.cy",
