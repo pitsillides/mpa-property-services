@@ -5,6 +5,8 @@ const siteUrl = "https://mpapropertyservices.com";
 const siteName = "MPA Property Services";
 const siteDescription =
   "Διαχείριση κτιρίων, πολυκατοικιών και κοινοχρήστων με έδρα τη Λευκωσία και εξειδίκευση σε Λευκωσία και Λεμεσό.";
+const socialDescription =
+  "Building management, common expenses, maintenance coordination and responsive support for apartment buildings and complexes.";
 
 export const metadata: Metadata = {
   title: {
@@ -49,8 +51,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "MPA Property Services | Διαχείριση κτιρίων σε Λευκωσία & Λεμεσό",
-    description: siteDescription,
+    title: "MPA Property Services | Building Management",
+    description: socialDescription,
     url: siteUrl,
     siteName,
     images: [
@@ -67,8 +69,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MPA Property Services | Building Management in Nicosia & Limassol",
-    description: siteDescription,
+    title: "MPA Property Services | Building Management",
+    description: socialDescription,
     images: ["/og-social-preview-en.png"],
   },
   icons: {

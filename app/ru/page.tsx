@@ -15,25 +15,25 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "MPA Property Services | Управление зданиями в Никосии и Лимасоле",
+    title: "MPA Property Services | Управление зданиями",
     description:
-      "Управление зданиями, многоквартирными домами и общими расходами в Никосии и Лимасоле, с возможностью обслуживания по всему Кипру.",
+      "Управление зданиями, общие расходы, координация обслуживания и быстрая поддержка для многоквартирных домов и комплексов.",
     url: "/ru",
     images: [
       {
         url: "/og-social-preview-en.png",
         width: 1200,
         height: 630,
-        alt: "MPA Property Services - Building management in Nicosia and Limassol",
+        alt: "MPA Property Services - Building management and common expenses support",
       },
     ],
     locale: "ru_RU",
   },
   twitter: {
     card: "summary_large_image",
-    title: "MPA Property Services | Управление зданиями в Никосии и Лимасоле",
+    title: "MPA Property Services | Управление зданиями",
     description:
-      "Управление зданиями, многоквартирными домами и общими расходами в Никосии и Лимасоле.",
+      "Управление зданиями, общие расходы, координация обслуживания и быстрая поддержка для многоквартирных домов и комплексов.",
     images: ["/og-social-preview-en.png"],
   },
 };

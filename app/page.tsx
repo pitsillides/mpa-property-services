@@ -15,25 +15,25 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "MPA Property Services | Διαχείριση κτιρίων σε Λευκωσία & Λεμεσό",
+    title: "MPA Property Services | Διαχείριση Κτιρίων",
     description:
-      "Διαχείριση κτιρίων, πολυκατοικιών και κοινοχρήστων με έδρα τη Λευκωσία, ενεργή παρουσία σε Λευκωσία και Λεμεσό, και δυνατότητα παγκύπριας εξυπηρέτησης.",
+      "Διαχείριση κτιρίων, κοινόχρηστα, συντονισμός συντήρησης και άμεση υποστήριξη για πολυκατοικίες και συγκροτήματα.",
     url: "/",
     images: [
       {
         url: "/og-social-preview-en.png",
         width: 1200,
         height: 630,
-        alt: "MPA Property Services - Building management in Nicosia and Limassol",
+        alt: "MPA Property Services - Building management and common expenses support",
       },
     ],
     locale: "el_CY",
   },
   twitter: {
     card: "summary_large_image",
-    title: "MPA Property Services | Διαχείριση κτιρίων σε Λευκωσία & Λεμεσό",
+    title: "MPA Property Services | Διαχείριση Κτιρίων",
     description:
-      "Με έδρα τη Λευκωσία, αναλαμβάνουμε διαχείριση κτιρίων, πολυκατοικιών και κοινοχρήστων σε Λευκωσία και Λεμεσό.",
+      "Διαχείριση κτιρίων, κοινόχρηστα, συντονισμός συντήρησης και άμεση υποστήριξη για πολυκατοικίες και συγκροτήματα.",
     images: ["/og-social-preview-en.png"],
   },
 };
